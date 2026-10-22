@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101020">
+  <title>KB REAL GAMES</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">KB</div>
+        <div>
+          <h1>KB REAL GAMES</h1>
+          <p>PLAY • CHALLENGE • WIN</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="profileBtn" aria-label="Profile">👤</button>
+    </header>
+
+    <section class="profile-card">
+      <div class="avatar" id="avatar">🎮</div>
+      <div class="profile-info">
+        <p class="muted">WELCOME PLAYER</p>
+        <h2 id="playerName">Guest Player</h2>
+        <span class="level">⭐ LEVEL 1</span>
+      </div>
+      <div class="balance">
+        <span>YOUR POINTS</span>
+        <strong id="points">100</strong>
+        <small>🪙 Points</small>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="pill">🔥 DAILY CHALLENGE</span>
+        <h2>Ready to<br>Play?</h2>
+        <p>Play mini games and collect points.</p>
+        <button class="primary-btn" id="dailyBtn">🎁 Daily Bonus +10</button>
+      </div>
+      <div class="hero-art" aria-hidden="true">🚀<span>✨</span><b>🎯</b></div>
+    </section>
+
+    <div class="section-heading">
+      <div><h2>🎮 Mini Games</h2><p>Choose your next challenge</p></div>
+      <span class="count">5 GAMES</span>
+    </div>
+
+    <section class="games-grid">
+      <button class="game-card spin-card" data-game="spin">
+        <span class="game-icon">🎡</span>
+        <strong>Lucky Spin</strong>
+        <small>Spin for points</small>
+        <span class="play-tag">PLAY ›</span>
+      </button>
+      <button class="game-card tap-card" data-game="tap">
+        <span class="game-icon">👆</span>
+        <strong>Tap Challenge</strong>
+        <small>Tap and score</small>
+        <span class="play-tag">PLAY ›</span>
+      </button>
+      <button class="game-card memory-card" data-game="memory">
+        <span class="game-icon">🧠</span>
+        <strong>Memory Match</strong>
+        <small>Test your memory</small>
+        <span class="play-tag">PLAY ›</span>
+      </button>
+      <button class="game-card guess-card" data-game="guess">
+        <span class="game-icon">🔢</span>
+        <strong>Number Guess</strong>
+        <small>Find the number</small>
+        <span class="play-tag">PLAY ›</span>
+      </button>
+      <button class="game-card reaction-card" data-game="reaction">
+        <span class="game-icon">⚡</span>
+        <strong>Reaction Test</strong>
+        <small>Test your speed</small>
+        <span class="play-tag">PLAY ›</span>
+      </button>
+    </section>
+
+    <section class="game-panel hidden" id="gamePanel">
+      <div class="panel-heading">
+        <h2 id="gameTitle">Game</h2>
+        <button class="icon-btn" id="closeGame" aria-label="Close game">✕</button>
+      </div>
+      <p id="gameMessage">Let's play!</p>
+      <div id="gameArea"></div>
+    </section>
+
+    <section class="stats">
+      <div><span>🏆</span><strong id="gamesPlayed">0</strong><small>Games played</small></div>
+      <div><span>⭐</span><strong id="wins">0</strong><small>Wins</small></div>
+      <div><span>🎯</span><strong id="bestScore">0</strong><small>Best score</small></div>
+    </section>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-tab="home"><span>🏠</span>Home</button>
+      <button class="nav-item" data-tab="games"><span>🎮</span>Games</button>
+      <button class="nav-item" data-tab="profile"><span>👤</span>Profile</button>
+    </nav>
+    <footer>KB REAL GAMES · POINTS ARE FOR FUN</footer>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
