@@ -42,7 +42,7 @@
     data.points = Math.max(0, data.points + points);
     data.games++;
     if (win) data.wins++;
-    data.best = Math.max(data.best, points);
+    data.best = Math.max(data.best, Math.max(0, points));
     save();
   }
 
